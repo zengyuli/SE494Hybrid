@@ -104,7 +104,7 @@ export default class WeatherProject extends Component {
         if (weatherInfo.aqi&&weatherInfo.aqi.city.qlty){
           description = weatherInfo.aqi.city.qlty;
         } else {
-          description = weatherInfo.daily_forecast[0].wind.dir+" "+weatherInfo.daily_forecast[0].wind.sc+"级"
+          description = weatherInfo.daily_forecast[0].wind.dir+" "+weatherInfo.daily_forecast[0].wind.sc+"Level"
         }
         this.setState({
           forecast:{
@@ -139,7 +139,7 @@ export default class WeatherProject extends Component {
                   onSubmitEditing={this._handleTextChange.bind(this)}/>
               </View>
               <Text style={styles.mainText}>
-                天气
+                Weather
               </Text>
             </View>
             {content}
